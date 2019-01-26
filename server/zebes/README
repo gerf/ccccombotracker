@@ -1,0 +1,7 @@
+Zebes DeepZoom map files go here in the "zebes_files" directory.
+
+The current setup assumes the excellent Super Metroid map by Rick N. Bruns
+available at http://snesmaps.com/maps/SuperMetroid/SuperMetroidMapZebes.png
+
+DeepZoom tile generation can be done with MagickSlicer with default options:
+https://github.com/VoidVolker/MagickSlicer

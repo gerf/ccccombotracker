@@ -1,0 +1,148 @@
+.leaflet-container {
+  background: #000000;
+}
+
+html, body, #map {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  color: #cccccc;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.menu {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  z-index: 999;
+  width: auto;
+  height: auto;
+  padding: 4px;
+}
+
+.player-icon {
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.player-icon.player-selected {
+  box-shadow: #dadada 0px 0px 10px 2px, inset #aaaaaa 0px 0px 190px -10px;
+}
+
+.item {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  background-image: url('items/itemsprites.png');
+  transform-origin: 0 0;
+}
+
+.item-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+
+/* 0 0 is ? block */
+.item-sm-missile { background-position: -16px 0px; }
+.item-sm-morphball { background-position: -32px 0px; }
+.item-sm-bombs { background-position: -48px 0px; }
+.item-sm-supermissile { background-position: -64px 0px; }
+.item-sm-powerbomb { background-position: -80px 0px; }
+.item-sm-screwattack { background-position: -96px 0px; }
+.item-sm-speedboost { background-position: -112px 0px; }
+.item-sm-gravitysuit { background-position: -128px 0px; }
+
+.item-sm-energytank { background-position: 0px -16px; }
+.item-sm-spacejump { background-position: -16px -16px; }
+.item-sm-variasuit { background-position: -32px -16px; }
+.item-sm-hijumpboots { background-position: -48px -16px; }
+.item-sm-xrayscope { background-position: -64px -16px; }
+.item-sm-reservetank { background-position: -80px -16px; }
+.item-sm-springball { background-position: -96px -16px; }
+.item-sm-grapplingbeam { background-position: -112px -16px; }
+.item-alttp-rupees { background-position: -128px -16px; }
+
+.item-sm-chargebeam { background-position: 0px -32px; }
+.item-sm-spazer { background-position: -16px -32px; }
+.item-sm-wavebeam { background-position: -32px -32px; }
+.item-sm-plasmabeam { background-position: -48px -32px; }
+.item-sm-icebeam { background-position: -64px -32px; }
+.item-alttp-shield1 { background-position: -80px -32px; } /* All shields use one icon on map */
+.item-alttp-shield2 { background-position: -96px -32px; }
+.item-alttp-shield3 { background-position: -112px -32px; }
+.item-alttp-bottlefairy { background-position: -128px -32px; } /* Can be repurposed */
+
+.item-alttp-sword1 { background-position: 0px -48px; } /* All swords use one icon on map */
+.item-alttp-sword2 { background-position: -16px -48px; }
+.item-alttp-sword3 { background-position: -32px -48px; }
+.item-alttp-sword4 { background-position: -48px -48px; }
+.item-alttp-shovel { background-position: -64px -48px; }
+.item-alttp-hammer { background-position: -80px -48px; }
+.item-alttp-hookshot { background-position: -96px -48px; }
+.item-alttp-lantern { background-position: -112px -48px; }
+.item-alttp-bottlebee { background-position: -128px -48px; } /* Can be repurposed */
+
+.item-alttp-glove1 { background-position: 0px -64px; } /* All gloves use one icon on map */
+.item-alttp-glove2 { background-position: -16px -64px; }
+.item-alttp-caneofbyrna { background-position: -32px -64px; }
+.item-alttp-caneofsomaria { background-position: -48px -64px; }
+.item-alttp-magiccape { background-position: -64px -64px; }
+.item-alttp-flippers { background-position: -80px -64px; }
+.item-alttp-flute { background-position: -96px -64px; }
+.item-alttp-magicmirror { background-position: -112px -64px; }
+.item-alttp-bottlegreen { background-position: -128px -64px; } /* Can be repurposed */
+
+.item-alttp-pegasusboots { background-position: 0px -80px; }
+.item-alttp-bookofmudora { background-position: -16px -80px; }
+.item-alttp-magicpowder { background-position: -32px -80px; }
+.item-alttp-net { background-position: -48px -80px; }
+.item-alttp-mushroom { background-position: -64px -80px; }
+.item-alttp-bombos { background-position: -80px -80px; }
+.item-alttp-ether { background-position: -96px -80px; }
+.item-alttp-quake { background-position: -112px -80px; }
+.item-alttp-bottleblue { background-position: -128px -80px; } /* Can be repurposed */
+
+.item-alttp-firerod { background-position: 0px -96px; }
+.item-alttp-icerod { background-position: -16px -96px; }
+.item-alttp-moonpearl { background-position: -32px -96px; }
+.item-alttp-crystal { background-position: -48px -96px; }
+.item-alttp-bow { background-position: -64px -96px; }
+.item-alttp-arrows { background-position: -80px -96px; } /* May need separate normal vs. silver */
+.item-alttp-bowarrows { background-position: -96px -96px; }
+.item-alttp-bowsilverarrows { background-position: -112px -96px; }
+.item-alttp-bottlered { background-position: -128px -96px; } /* Can be repurposed */
+
+.item-alttp-blueboomerang { background-position: 0px -112px; }
+.item-alttp-magicboomerang { background-position: -16px -112px; }
+.item-alttp-bomb { background-position: -32px -112px; } /* Differentiate between nornmal and upgrade? */
+.item-alttp-bombs { background-position: -48px -112px; }
+.item-alttp-halfmagic { background-position: -64px -112px; } /* Missing 1/2 text */
+.item-alttp-armor1 { background-position: -80px -112px; } /* May need separate normal vs. silver */
+.item-alttp-armor2 { background-position: -96px -112px; } /* All armor uses one icon on map */
+.item-alttp-armor3 { background-position: -112px -112px; }
+.item-alttp-bottle { background-position: -128px -112px; }
+
+.item-alttp-heartcontainer { background-position: 0px -128px; }
+.item-alttp-pieceofheart { background-position: -16px -128px; }
+.item-alttp-map { background-position: -32px -128px; }
+.item-alttp-compass { background-position: -48px -128px; }
+.item-alttp-smallkey { background-position: -64px -128px; }
+.item-alttp-bigkey { background-position: -80px -128px; }
+.item-alttp-pendantofcourage { background-position: -96px -128px; }
+.item-alttp-pendantofpower { background-position: -112px -128px; }
+.item-alttp-pendantofwisdom { background-position: -128px -128px; }
