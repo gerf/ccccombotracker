@@ -573,7 +573,7 @@ INSERT INTO `region` (`sourceid`, `regionid`, `xpos`, `ypos`) VALUES
 ('sm', 'Maridia', 23, 18),
 ('sm', 'Norfair', 26, 38),
 ('sm', 'Space Colony', 0, 0),
-('sm', 'Tourian', 0, 0),
+('sm', 'Tourian', -5, 0),
 ('sm', 'Wrecked Ship', 32, -10);
 
 DROP TABLE IF EXISTS `room`;
